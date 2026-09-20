@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FORMA">
+  <rect width="64" height="64" rx="12" fill="#14110e"/>
+  <g fill="none" stroke="#ff6b2c" stroke-width="3" stroke-linecap="square">
+    <path d="M16 48 V16 H40"/>
+    <path d="M16 32 H34" stroke="#3dba9a"/>
+    <path d="M18 20 H38" stroke="#f4ecdc" stroke-width="1.5" opacity=".7"/>
+    <path d="M18 24 H36" stroke="#f4ecdc" stroke-width="1.5" opacity=".45"/>
+    <path d="M18 28 H32" stroke="#f4ecdc" stroke-width="1.5" opacity=".25"/>
+  </g>
+</svg>

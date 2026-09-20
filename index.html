@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#14110e" />
+    <title>FORMA — atelier de impressão 3D</title>
+    <meta
+      name="description"
+      content="Peças impressas numa Bambu Lab A2L: chaveiros personalizados, figuras anime e comic, miniaturas, decoração e props. Entra na lista de espera da loja."
+    />
+    <meta property="og:title" content="FORMA — atelier de impressão 3D" />
+    <meta
+      property="og:description"
+      content="Chaveiros, figuras em várias peças, miniaturas, decoração e props. Impressos numa Bambu Lab A2L. Entra na lista da loja."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" data-i18n="ticker">; PRINTER: Bambu Lab A2L   ; MATERIAL: PLA · PETG   ; MODE: multi-peça   ; STATUS: a imprimir a loja   ; NICHES: 5</div>
+      <div class="ticker-track" data-i18n="ticker">; PRINTER: Bambu Lab A2L   ; MATERIAL: PLA · PETG   ; MODE: multi-peça   ; STATUS: a imprimir a loja   ; NICHES: 5</div>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>FORMA</strong>
+          <small data-i18n="footer.tag">atelier 3D</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="primary">
+        <a href="#nichos" data-i18n="nav.niches">Nichos</a>
+        <a href="#catalogo" data-i18n="nav.catalog">Catálogo</a>
+        <a href="#orcamento" data-i18n="nav.quote">Orçamento</a>
+        <a href="#loja" data-i18n="nav.shop">A loja</a>
+        <a href="#lista" class="nav-cta" data-i18n="nav.waitlist">Lista de espera</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="pt-PT" aria-pressed="true">PT</button>
+        <button type="button" data-lang="pt-BR" aria-pressed="false">BR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <noscript>
+      <p class="noscript">FORMA precisa de JavaScript para o idioma e o catálogo. O e-mail da lista está no formulário em baixo se o browser o mostrar.</p>
+    </noscript>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="kicker">
+            <span class="led" aria-hidden="true"></span>
+            <span data-i18n="hero.kicker">Atelier de impressão 3D</span>
+          </p>
+          <h1 data-i18n="hero.title">Estamos a imprimir a loja.</h1>
+          <p class="lead" data-i18n="hero.lead">Peças feitas numa Bambu Lab A2L — chaveiros com o teu nome, figuras em várias peças com grande detalhe, miniaturas, decoração e props de grande formato. Deixa o teu e-mail. Avisamos-te quando puderes encomendar.</p>
+
+          <form class="panel waitlist-form" id="waitlist-form" novalidate>
+            <div class="panel-screws" aria-hidden="true"></div>
+            <label class="field">
+              <span data-i18n="form.email">E-mail</span>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="o teu e-mail"
+                data-i18n-placeholder="form.emailPlaceholder"
+              />
+            </label>
+            <label class="field">
+              <span data-i18n="form.name">Nome</span>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="como te chamamos"
+                data-i18n-placeholder="form.namePlaceholder"
+              />
+            </label>
+            <fieldset class="chips">
+              <legend data-i18n="form.interest">O que te interessa</legend>
+              <div class="chip-row" id="interest-chips"></div>
+            </fieldset>
+            <label class="consent">
+              <input type="checkbox" name="consent" required />
+              <span data-i18n="form.consent">Aceito receber e-mails da FORMA sobre a abertura da loja e peças novas. Posso sair quando quiser.</span>
+            </label>
+            <button class="btn" type="submit">
+              <span data-i18n="form.submit">Quero ser avisado</span>
+              <span class="btn-gcode" aria-hidden="true">G1 X wait</span>
+            </button>
+            <p class="form-status" id="form-status" role="status" hidden></p>
+            <input type="hidden" name="quote" id="quote-summary" />
+            <a class="privacy-link" href="#privacidade" data-i18n="form.privacyLink">Como tratamos os dados</a>
+          </form>
+        </div>
+
+        <figure class="printer-stage">
+          <div class="printer" aria-hidden="true">
+            <div class="printer-frame">
+              <div class="printer-top">
+                <span class="printer-led"></span>
+                <span class="printer-name">A2L</span>
+              </div>
+              <div class="gantry">
+                <div class="gantry-bar"></div>
+                <div class="nozzle"></div>
+              </div>
+              <div class="bed">
+                <div class="print-object">
+                  <span class="layer"></span>
+                  <span class="layer"></span>
+                  <span class="layer"></span>
+                  <span class="layer"></span>
+                  <span class="layer"></span>
+                  <span class="figure-head"></span>
+                </div>
+              </div>
+            </div>
+            <div class="spool" data-spool="1"></div>
+            <div class="spool" data-spool="2"></div>
+          </div>
+          <figcaption data-i18n="hero.printerCaption">Cabeça de impressão em movimento · camada a camada</figcaption>
+        </figure>
+      </section>
+
+      <section class="stats" aria-label="facts">
+        <article>
+          <strong data-i18n="stats.printer">Bambu Lab A2L</strong>
+          <span data-i18n="stats.printerHint">grande formato, detalhe fino</span>
+        </article>
+        <article>
+          <strong data-i18n="stats.parts">Multi-peça</strong>
+          <span data-i18n="stats.partsHint">montagem e acabamento</span>
+        </article>
+        <article>
+          <strong data-i18n="stats.langs">PT · BR · EN</strong>
+          <span data-i18n="stats.langsHint">três línguas desde o dia zero</span>
+        </article>
+        <article>
+          <strong data-i18n="stats.list">Só e-mail</strong>
+          <span data-i18n="stats.listHint">sem spam, sem conta</span>
+        </article>
+      </section>
+
+      <section class="section" id="nichos">
+        <header class="section-head">
+          <p class="kicker" data-i18n="niches.kicker">Cinco linhas de produto</p>
+          <h2 data-i18n="niches.title">Cinco nichos, uma impressora.</h2>
+          <p data-i18n="niches.lead">A A2L aguentá-los a todos: do chaveiro de 4 cm ao elmo de palco. Escolhe o que queres ver primeiro — a lista de espera guarda o teu interesse.</p>
+        </header>
+        <div class="niche-grid" id="niche-grid"></div>
+      </section>
+
+      <section class="section cream" id="catalogo">
+        <header class="section-head">
+          <p class="kicker" data-i18n="catalog.kicker">Peças que já existem</p>
+          <h2 data-i18n="catalog.title">No catálogo agora</h2>
+          <p data-i18n="catalog.lead">Isto não é a loja final — é o que já está a ser impresso e pode ser encomendado por e-mail até o checkout estar no ar.</p>
+        </header>
+        <div class="filters" id="filters" role="tablist"></div>
+        <div class="product-grid" id="product-grid"></div>
+        <p class="empty" id="catalog-empty" hidden data-i18n="catalog.empty">Nada neste nicho ainda. Entra na lista e diz-nos o que queres ver.</p>
+      </section>
+
+      <section class="section cream" id="orcamento">
+        <header class="section-head">
+          <p class="kicker" data-i18n="quote.kicker">; COST ESTIMATE</p>
+          <h2 data-i18n="quote.title">Quanto custa imprimir?</h2>
+          <p data-i18n="quote.lead">Uma fotografia não mede filament nem tempo de máquina. O custo real vem do volume 3D e do corte. Sem nuvem: o cálculo corre neste browser, com a cama da A2L (330 × 320 × 325 mm).</p>
+        </header>
+        <div class="quote-tabs" role="tablist">
+          <button type="button" class="filter" data-quote-tab="photo" aria-pressed="true" data-i18n="quote.tabPhoto">Foto</button>
+          <button type="button" class="filter" data-quote-tab="stl" aria-pressed="false" data-i18n="quote.tabStl">STL</button>
+        </div>
+        <div class="quote-layout">
+          <form class="panel quote-panel" id="quote-form" onsubmit="return false;">
+            <div class="panel-screws" aria-hidden="true"></div>
+            <div data-quote-panel="photo">
+              <p class="muted" data-i18n="quote.photoHelp"></p>
+              <div class="dropzone" id="quote-drop-photo" tabindex="0">
+                <span data-i18n="quote.dropPhoto">Larga uma foto</span>
+                <input id="quote-photo" type="file" accept="image/*" hidden />
+              </div>
+              <label class="field">
+                <span data-i18n="quote.height">Altura alvo</span>
+                <input id="quote-height" type="range" min="2" max="32" step="1" value="12" />
+                <output id="quote-height-val">12 cm</output>
+              </label>
+              <label class="field">
+                <span data-i18n="quote.niche">Nicho</span>
+                <select id="quote-niche"></select>
+              </label>
+              <label class="field">
+                <span data-i18n="quote.detail">Detalhe</span>
+                <select id="quote-detail">
+                  <option value="simple" data-i18n="quote.detailSimple">Simples</option>
+                  <option value="normal" selected data-i18n="quote.detailNormal">Normal</option>
+                  <option value="complex" data-i18n="quote.detailComplex">Complexo</option>
+                </select>
+              </label>
+            </div>
+            <div data-quote-panel="stl" hidden>
+              <p class="muted" data-i18n="quote.stlHelp"></p>
+              <div class="dropzone" id="quote-drop-stl" tabindex="0">
+                <span data-i18n="quote.dropStl">Larga um .stl</span>
+                <input id="quote-stl" type="file" accept=".stl,model/stl,application/sla" hidden />
+              </div>
+            </div>
+            <label class="field">
+              <span data-i18n="quote.material">Material</span>
+              <select id="quote-material">
+                <option value="pla">PLA</option>
+                <option value="petg">PETG</option>
+              </select>
+            </label>
+            <label class="field">
+              <span data-i18n="quote.infill">Infill</span>
+              <select id="quote-infill">
+                <option value="0.10">10%</option>
+                <option value="0.15" selected>15%</option>
+                <option value="0.20">20%</option>
+                <option value="0.30">30%</option>
+              </select>
+            </label>
+            <p class="muted" data-i18n="quote.privacy"></p>
+          </form>
+          <aside class="machine-card quote-result" id="quote-result" hidden></aside>
+        </div>
+      </section>
+
+      <section class="section shop" id="loja">
+        <header class="section-head">
+          <p class="kicker" data-i18n="shop.kicker">O que vem a seguir</p>
+          <h2 data-i18n="shop.title">A loja, camada a camada</h2>
+          <p data-i18n="shop.lead">O checkout, as cores de filament e as encomendas com o teu nome ainda estão na placa de construção. Até lá, a lista de espera é a porta.</p>
+        </header>
+        <div class="shop-layout">
+          <ol class="shop-list" id="shop-list"></ol>
+          <aside class="machine-card">
+            <p class="machine-code">; MACHINE</p>
+            <h3 data-i18n="shop.asideTitle">Bambu Lab A2L</h3>
+            <p data-i18n="shop.aside">Impressora de grande formato, boa para peças grandes e para o detalhe das figuras em várias partes. Filament com cor sólida, não pintamos de fábrica — o PLA já chega a parecer objecto acabado.</p>
+            <div class="swatches" aria-hidden="true">
+              <span style="--c:#f4ecdc"></span>
+              <span style="--c:#ff6b2c"></span>
+              <span style="--c:#3dba9a"></span>
+              <span style="--c:#7b8cff"></span>
+              <span style="--c:#1a1410"></span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section waitlist-block" id="lista">
+        <header class="section-head">
+          <p class="kicker" data-i18n="waitlist.kicker">Passo zero</p>
+          <h2 data-i18n="waitlist.title">Um e-mail. Zero spam.</h2>
+          <p data-i18n="waitlist.lead">Não há conta, não há aplicação. Só a abertura da loja, peças novas, e a possibilidade de dizeres que nicho queres ver primeiro.</p>
+        </header>
+        <p class="muted" data-i18n="waitlist.note">Se já enviaste o e-mail em cima, está feito — não precisas de o repetir.</p>
+        <a class="btn" href="#waitlist-form">
+          <span data-i18n="form.submit">Quero ser avisado</span>
+        </a>
+      </section>
+
+      <section class="privacy" id="privacidade">
+        <h2 data-i18n="privacy.title">Dados</h2>
+        <p data-i18n="privacy.body">Guardamos o e-mail, o nome se o deres, o idioma da página, os nichos que marcares e, se usares o orçamento, um resumo em texto. Foto e STL ficam no teu browser. Serve só para te avisar da loja e de peças novas. Não vendemos listas. Para apagar os teus dados, responde a qualquer e-mail nosso e pede a remoção.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong data-i18n="footer.mark">FORMA</strong>
+        <span data-i18n="footer.tag">atelier 3D</span>
+      </div>
+      <p data-i18n="footer.rights">Peças originais. Sem licenças oficiais de anime, comic ou jogos.</p>
+      <p class="gcode" data-i18n="footer.gcode">; end of print — thanks for waiting</p>
+      <a id="instagram-link" class="ig" hidden href="#" rel="noreferrer" data-i18n="footer.instagram"></a>
+    </footer>
+
+    <div class="mobile-cta">
+      <a class="btn" href="#waitlist-form" data-i18n="form.submit">Quero ser avisado</a>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
